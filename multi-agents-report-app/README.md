@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project implements a multi-agent system utilizing the Gemini API, where agents communicate with each other in a structured JSON format to collaboratively generate reports. The system consists of three agents: the **Customer Relation Officer**, the **Report Author**, and the **Editor**. Each agent plays a distinct role in the process of gathering information, drafting, reviewing, and finalizing reports.
+This project implements a multi-agent system utilizing the Gemini API, where agents communicate with each other collaboratively generate reports. The system consists of three agents: the **Customer Relation Officer**, the **Report Author**, and the **Editor**. Each agent plays a distinct role in the process of gathering information, drafting, reviewing, and finalizing reports.
 
 ## Table of Contents
 
@@ -10,11 +10,6 @@ This project implements a multi-agent system utilizing the Gemini API, where age
 - [Agents Overview](#agents-overview)
 - [System Workflow](#system-workflow)
 - [Requirements](#requirements)
-- [Setup Instructions](#setup-instructions)
-- [Usage](#usage)
-- [API Communication Structure](#api-communication-structure)
-- [Contributing](#contributing)
-- [License](#license)
 
 ---
 
