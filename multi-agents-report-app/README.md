@@ -1,80 +1,80 @@
-# Multi-Agent LLM System Using Gemini API
+# Multi-Agent LLM Sistemi Gemini API Kullanımı
 
-## Overview
+## Genel Bakış
 
-This project implements a multi-agent system utilizing the Gemini API, where agents communicate with each other collaboratively generate reports. The system consists of three agents: the **Customer Relation Officer**, the **Report Author**, and the **Editor**. Each agent plays a distinct role in the process of gathering information, drafting, reviewing, and finalizing reports.
+Bu proje, Gemini API kullanarak bir multi-ajandan oluşan bir sistemi uygular. Ajanlar, birbirleriyle işbirliği yaparak raporlar oluşturur. Sistem, **Customer Relation Officer** (CRO), **Author** (Report Author) ve **Editor** olmak üzere üç ajandan oluşur. Her ajan, bilgi toplama, rapor yazma, gözden geçirme ve raporu sonlandırma sürecinde farklı bir rol oynar.
 
-## Table of Contents
+## İçindekiler
 
-- [Project Description](#project-description)
-- [Agents Overview](#agents-overview)
-- [System Workflow](#system-workflow)
-- [Requirements](#requirements)
-
----
-
-## Project Description
-
-This project aims to create a collaborative environment for generating reports. Using the **Gemini API**, agents will communicate and handle tasks in the following sequence:
-
-1. **Customer Relation Officer (CRO)**: Initiates the interaction with the user to gather report requirements, and delivers the collected data to the **Report Author**.
-2. **Report Author**: Drafts the report based on the provided information and prepares it for review by the **Editor**.
-3. **Editor**: Reviews the report for completeness, accuracy, and relevance. If necessary, provides revision feedback to the **Report Author** until the report is finalized.
-
-The communication between the agents is structured using JSON, ensuring a clear and organized exchange of information and instructions.
+- [Proje Tanımı](#proje-tanımı)
+- [Ajanlar Hakkında](#ajanlar-hakkında)
+- [Sistem Akışı](#sistem-akışı)
+- [Gereksinimler](#gereksinimler)
 
 ---
 
-## Agents Overview
+## Proje Tanımı
+
+Bu proje, raporların oluşturulması için işbirlikçi bir ortam yaratmayı amaçlar. **Gemini API** kullanarak, ajanlar şu sırayla görevleri yerine getirir:
+
+1. **Customer Relation Officer (CRO)**: Kullanıcı ile etkileşime girer, rapor ihtiyaçlarını toplar ve toplanan verileri **Author**'a iletir.
+2. **Author**: Alınan bilgilerle raporu taslak olarak hazırlar ve **Editor**'e gözden geçirmesi için iletir.
+3. **Editor**: Raporu tamlık, doğruluk ve uygunluk açısından gözden geçirir. Gerekli görülürse **Author**'a revizyon geri bildiriminde bulunur ve rapor tamamlanana kadar bu süreci tekrarlar.
+
+Ajanlar arasındaki iletişim, talimatların net ve düzenli bir şekilde iletilmesi sağlanır.
+
+---
+
+## Ajanlar Hakkında
 
 ### 1. Customer Relation Officer (CRO)
-The **Customer Relation Officer (CRO)** is responsible for interacting with the user. The agent's main tasks include:
-- Asking the user for the details of the report they need.
-- Determining if any information is missing and requesting further clarification from the user.
-- Sending the gathered data to the **Report Author** for drafting the report.
+**Customer Relation Officer (CRO)**, kullanıcı ile etkileşime giren ajandır. Bu ajanın başlıca görevleri şunlardır:
+- Kullanıcıdan rapor için gerekli detayları istemek.
+- Eksik bilgiler olup olmadığını belirlemek ve kullanıcıdan ek bilgi talep etmek.
+- Toplanan verileri, rapor yazmak için **Author**'a iletmek.
 
-**Key tasks:**
-- Gather report topics and required details.
-- Request additional information if needed.
-- Deliver the final collected information to the **Report Author**.
+**Ana görevler:**
+- Rapor konularını ve gerekli detayları toplamak.
+- Gerekirse ek bilgi istemek.
+- Toplanan verileri **Author**'a iletmek.
 
-### 2. Report Author
-The **Report Author** uses the collected data from the **Customer Relation Officer (CRO)** to begin drafting the report. The **Report Author** is responsible for:
-- Writing the report based on the details received from the **CRO**.
-- Revising the report based on feedback provided by the **Editor** until the report is satisfactory.
+### 2. Author
+**Author**, **Customer Relation Officer (CRO)**'dan gelen verileri kullanarak raporu taslak olarak yazmaya başlar. **Author**'ın başlıca görevleri şunlardır:
+- **CRO**'dan gelen detaylarla raporu yazmak.
+- **Editor**'den gelen geri bildirimlere göre raporu revize etmek ve rapor tatmin edici hale gelene kadar düzenlemek.
 
-**Key tasks:**
-- Draft the initial report.
-- Revise the report as per **Editor**'s suggestions.
-- Finalize the report when no further revisions are required.
+**Ana görevler:**
+- İlk raporu yazmak.
+- **Editor**'ün önerileri doğrultusunda raporu revize etmek.
+- Hiçbir revizyon gerekmiyorsa raporu sonlandırmak.
 
 ### 3. Editor
-The **Editor** reviews the report written by the **Report Author**. The **Editor** is responsible for:
-- Checking the report's completeness and ensuring that it aligns with the user's expectations.
-- Providing revision feedback to the **Report Author** if necessary.
+**Editor**, **Author** tarafından yazılan raporu gözden geçiren ajandır. **Editor**'ün başlıca görevleri şunlardır:
+- Raporun tamamlığını kontrol etmek ve kullanıcının beklentilerine uygun olup olmadığını değerlendirmek.
+- Gerekli görüldüğünde **Author**'a revizyon talebi göndermek.
 
-**Key tasks:**
-- Review the report.
-- Provide revision requests if needed.
-- Confirm when the report is complete and finalize it.
-
----
-
-## System Workflow
-
-1. **Customer Relation Officer** (CRO) initiates a conversation with the user to understand their needs.
-2. CRO gathers necessary information and forwards it to the **Report Author**.
-3. **Report Author** drafts the report based on the provided details.
-4. The **Editor** reviews the report and provides feedback for revisions.
-5. Once the **Editor** is satisfied, the report is finalized.
-
-The interaction between agents follows a well-defined process, where JSON-structured data is exchanged to ensure clarity and consistency.
+**Ana görevler:**
+- Raporu gözden geçirmek.
+- Gerekirse revizyon talepleri göndermek.
+- Rapor tamamlandığında sonlandırmak.
 
 ---
 
-## Requirements
+## Sistem Akışı
 
-- Python 3.8 or higher
-- `google-generativeai` library for integrating with Gemini API
-- `python-dotenv` to manage environment variables
-- Other dependencies listed in `requirements.txt`
+1. **Customer Relation Officer** (CRO) kullanıcı ile etkileşime girer ve ihtiyaçlarını anlar.
+2. **CRO**, gerekli bilgileri toplar ve **Author**'a iletir.
+3. **Author**, verilen bilgilerle raporu taslak olarak yazar.
+4. **Editor**, raporu gözden geçirir ve revizyon geri bildiriminde bulunur.
+5. **Editor**, rapordan memnun kaldığında raporu tamamlar.
+
+Ajanlar arasındaki etkileşim, sistemin düzenli ve net bir şekilde çalışmasını sağlar.
+
+---
+
+## Gereksinimler
+
+- Python 3.8 veya daha yüksek bir sürüm
+- **google-generativeai** kütüphanesi (Gemini API ile entegrasyon için)
+- **python-dotenv** (çevre değişkenlerini yönetmek için)
+- `requirements.txt` dosyasında listelenen diğer bağımlılıklar
