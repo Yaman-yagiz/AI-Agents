@@ -1,4 +1,4 @@
-from markdown import *
+from markdown import * # type: ignore
 from agent import *
 ROLES = {
     "cro": """
