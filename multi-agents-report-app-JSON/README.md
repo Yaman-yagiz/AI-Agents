@@ -10,6 +10,7 @@ Bu proje, Gemini API kullanarak JSON tabanlı iletişim protokolü üzerinden ç
 - [Ajanlar ve JSON Yapıları](#ajanlar-ve-json-yapıları)
 - [Sistem Akışı](#sistem-akışı)
 - [Gereksinimler](#gereksinimler)
+- [Önemli Notlar](#önemli-notlar)
 
 ## Proje Tanımı
 
