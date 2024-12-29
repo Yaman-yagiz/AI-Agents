@@ -13,7 +13,7 @@
 ## 🚀 Başlangıç  
 Projeyi klonlayarak başlayabilirsiniz:  
 ```bash
-git clone https://github.com/kullaniciadi/ai-agents-hub.git
+git clone https://github.com/Yaman-yagiz/AI-Agents.git
 ```
 
 ## 📚 Yararlanılan Kaynaklar  
