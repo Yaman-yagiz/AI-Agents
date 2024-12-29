@@ -20,7 +20,7 @@ git clone https://github.com/kullaniciadi/ai-agents-hub.git
 
 Bu projeyi oluştururken aşağıdaki kaynaklardan faydalanılmıştır:  
 
-- *Murat Karakaya Akademi Yotube Kanalı*
-- *OpenAI Dokümantasyonu*
-- *Gemini Developer API*
+- *[Murat Karakaya Akademi YouTube Kanalı](https://www.youtube.com/@MuratKarakayaAkademi)*
+- *[OpenAI Dokümantasyonu](https://platform.openai.com/docs/)*
+- *[Gemini Developer API](https://ai.google.dev/gemini-api/docs?hl=tr)*
 - *Çeşitli açık kaynak projeler ve makaleler*
