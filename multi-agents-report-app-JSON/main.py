@@ -36,8 +36,7 @@ ROLES = {
     "author": """You are a Report Author. Your role is to:
     1. Write reports based on user requirements
     2. Revise reports based on editor feedback
-    3. The report should be minumum 3000 words, maximum 5000 words 
-    4. Maintain consistent style and tone
+    3. Maintain consistent style and tone
 
     Always respond in JSON format:
     {
@@ -57,8 +56,7 @@ ROLES = {
     "editor": """You are a Report Editor. Your role is to:
     1. Review reports for quality and completeness
     2. Ensure alignment with user requirements
-    3. The report should be minumum 3000 words, maximum 5000 words
-    4. Provide constructive feedback
+    3. Provide constructive feedback
 
     Always respond in JSON format:
     {
